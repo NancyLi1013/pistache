@@ -160,6 +160,19 @@ Some other CMAKE defines:
 | PISTACHE_ENABLE_NETWORK_TESTS | True        | Run unit tests requiring remote network access |
 | PISTACHE_USE_SSL              | False       | Build server with SSL support                  |
 
+# Installing and building via vcpkg
+
+You can download and install pistache using the [vcpkg](https://github.com/Microsoft/vcpkg) dependency manager:
+
+```console
+    $ git clone https://github.com/Microsoft/vcpkg.git
+    $ cd vcpkg
+    $ ./bootstrap-vcpkg.sh
+    $ ./vcpkg integrate install
+    $ vcpkg install pistache
+```
+The pistache port in vcpkg is kept up to date by Microsoft team members and community contributors. If the version is out of date, please [create an issue or pull request](https://github.com/Microsoft/vcpkg) on the vcpkg repository.
+
 # Continuous Integration Testing
 
 It is important that all patches pass unit testing. Unfortunately developers make all kinds of changes to their local development environment that can have unintended consequences. This can means sometimes tests on the developer's computer pass when they should not, and other times failing when they should not have. 
